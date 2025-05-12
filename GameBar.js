@@ -8,7 +8,7 @@
     const IMG_TAG_REGEX = /\[img:(?:<)?([^>\]]+)(?:>)?\]/g;
 
     // 添加渲染深度设置，设为0表示渲染所有楼层
-    const RENDER_DEPTH = 2; // 修改这个数字来控制渲染深度，例如设为2表示只渲染最新的2层
+    const RENDER_DEPTH = 0; // 修改这个数字来控制渲染深度，例如设为2表示只渲染最新的2层
 
     // 图片别名管理
     const imageAlias = (function() {
