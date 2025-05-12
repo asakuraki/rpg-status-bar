@@ -1,4 +1,3 @@
-"use strict";
 (function() {
     // 常量定义
     const RPG_TAG = '<GameBar>';
