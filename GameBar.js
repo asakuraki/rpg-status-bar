@@ -2030,24 +2030,4 @@
             }
         });
     }
-
-    // 向外部暴露初始化函数，让导入者可以调用
-    window.RPGStatusBar = {
-        init: function() {
-            // 添加必要的初始化代码，比如设置事件监听等
-            $(document).ready(function() {
-                Promise.all([imageAlias.update(), themeManager.update()]).then(() => {            
-                    eventOn(tavern_events.CHARACTER_MESSAGE_RENDERED, onMessageRendered);
-                    eventOn(tavern_events.USER_MESSAGE_RENDERED, onMessageRendered);
-                    eventOn(tavern_events.MESSAGE_UPDATED, onMessageRendered);
-                    eventOn(tavern_events.MESSAGE_SWIPED, onMessageRendered);
-                    
-                    setupGlobalEventListeners();
-                    
-                    refreshAllStatusBars();
-                });
-            });
-            console.log("[RPG状态栏] 已加载");
-        }
-    };
 })();
